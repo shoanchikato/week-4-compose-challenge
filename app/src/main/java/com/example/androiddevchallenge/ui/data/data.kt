@@ -15,6 +15,7 @@
  */
 package com.example.androiddevchallenge.ui.data
 
+import com.example.androiddevchallenge.model.AdditionalDetails
 import com.example.androiddevchallenge.model.DailyData
 import com.example.androiddevchallenge.model.DailyWeather
 import com.example.androiddevchallenge.model.HourlyTemp
@@ -124,6 +125,15 @@ val currentDayHourlyTemp = listOf(
     ),
 )
 
+val additionalDetails = AdditionalDetails(
+    sunrise = "3:55 am",
+    sunset = "9:13 pm",
+    precipitation = "10%",
+    humidity = "42%",
+    wind = "11 km/h",
+    pressure = "1009 hPa"
+)
+
 val today = DailyData(
     locationName = "Harare",
     dateString = "Mon, July 6",
@@ -135,4 +145,5 @@ val today = DailyData(
     currentDayLongDescription = "Feels like 29°",
     weekTemp = weekTemp,
     currentDayHourlyTemp = currentDayHourlyTemp,
+    additionalDetails = additionalDetails,
 )

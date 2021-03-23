@@ -17,8 +17,11 @@ interface.
 Learnt a lot about Jetpack Compose accessibility API, which is extremely easy and a delight to
 implement.
 
-Also learnt about Jetpack Compose testing API, that is developer friendly and very helpful when
-improve code quality.
+Also learnt about Jetpack Compose testing API, that is developer friendly and helps improve code
+quality.
+
+Beautifully designed
+by: [Kostya Sobol for Fireart Studio](https://dribbble.com/shots/13372672-Weather-app)
 
 ## :camera_flash: Screenshots
 

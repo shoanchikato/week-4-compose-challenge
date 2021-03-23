@@ -10,13 +10,23 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
-    <string name="min_temperature_is">minimum temperature is %s</string>
-    <string name="max_temperature_is">maximum temperature is %s</string>
-    <string name="chances_of_rain">chances of rain is %s</string>
-    <string name="selected">Selected %d out of %d </string>
-    <string name="today_temp">today\'s temperature is %s, %s</string>
+    <string name="min_temperature_is">minimum temperature is %s </string>
+    <string name="max_temperature_is">maximum temperature is %s </string>
+    <string name="chances_of_rain">chances of rain is %s </string>
+    <string name="selected">Selected %d of %d </string>
+    <string name="today_description">today\'s temperature description is %s, %s </string>
     <string name="temp_in">temperature in %s </string>
-    <string name="tempAt">temperature at %s is %s</string>
+    <string name="tempAt">estimated temperature at %s is %s </string>
     <string name="welcome">Temperature for Monday, July 6 in Degrees Celsius</string>
     <string name="harare">Harare</string>
+    <string name="sunrise_at">sunrise is at %s </string>
+    <string name="sunset_at">sunset is at %s </string>
+    <string name="current_precipitation">precipitation is %s </string>
+    <string name="current_humidity">humidity is %s </string>
+    <string name="wind_speed">wind speed is %s and </string>
+    <string name="atmospheric">atmospheric pressure is %s </string>
+    <string name="additional_details_tag">additionalDetailsTag</string>
+    <string name="weather_icon_and_text_split_tag">weatherIconAndTextSplitTag</string>
+    <string name="daily_weather_row_tag">dailyWeatherRowTag</string>
+    <string name="hourly_temp_item_tag">hourlyTempItemTag</string>
 </resources>

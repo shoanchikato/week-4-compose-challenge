@@ -28,6 +28,7 @@ data class DailyData(
     val currentDayLongDescription: String,
     val weekTemp: List<DailyWeather>,
     val currentDayHourlyTemp: List<HourlyTemp>,
+    val additionalDetails: AdditionalDetails,
 )
 
 data class HourlyTemp(val hour: String, val temp: String)
@@ -38,6 +39,15 @@ data class DailyWeather(
     val chancesOfRain: String = "0%",
     val max: String,
     val min: String,
+)
+
+data class AdditionalDetails(
+    val sunrise: String,
+    val sunset: String,
+    val precipitation: String,
+    val humidity: String,
+    val wind: String,
+    val pressure: String,
 )
 
 enum class WeatherIcon(val icon: Int, val description: String) {
