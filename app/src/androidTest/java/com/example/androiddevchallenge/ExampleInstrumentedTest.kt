@@ -15,8 +15,14 @@
  */
 package com.example.androiddevchallenge
 
+import androidx.compose.ui.test.assertAny
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.androiddevchallenge.ui.data.today
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -27,12 +33,49 @@ import org.junit.runner.RunWith
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class WeatherAppInstrumentedTest {
     @get:Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
     @Test
-    fun sampleTest() {
-        // Add instrumented tests here
+    fun selected_location() {
+        val text = composeTestRule.activity.getString(R.string.harare)
+        composeTestRule.onNodeWithText(text, useUnmergedTree = true).assertExists()
+    }
+
+    @Test
+    fun current_temperature() {
+        val text = today.currentTemp
+        composeTestRule.onAllNodesWithText(text, useUnmergedTree = true).assertAny(hasText(text))
+    }
+
+    @Test
+    fun max_temperature() {
+        val text = today.currentDayMax
+        composeTestRule.onAllNodesWithText(text, useUnmergedTree = true).assertAny(hasText(text))
+    }
+
+    @Test
+    fun min_temperature() {
+        val text = today.currentDayMin
+        composeTestRule.onNodeWithText(text, useUnmergedTree = true).assertIsDisplayed()
+    }
+
+    @Test
+    fun short_description() {
+        val text = today.currentDayShortDescription
+        composeTestRule.onNodeWithText(text, useUnmergedTree = true).assertIsDisplayed()
+    }
+
+    @Test
+    fun long_description() {
+        val text = today.currentDayLongDescription
+        composeTestRule.onNodeWithText(text, useUnmergedTree = true).assertIsDisplayed()
+    }
+
+    @Test
+    fun date_string() {
+        val text = today.dateString
+        composeTestRule.onNodeWithText(text, useUnmergedTree = true).assertIsDisplayed()
     }
 }
